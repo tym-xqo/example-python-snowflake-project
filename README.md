@@ -25,10 +25,16 @@ $ python -m pip install -r requirements.txt
 
 ## Jupyter notebook usage
 
-- Follow installation above and open your Jupyter server from there
+- Follow installation above
+- Ensure `$DATABASE_URL` is [set in the local environment](https://analyzingalpha.com/jupyter-notebook-environment-variables-tutorial): `set -a; source .env; set +a`
+  - Alternatively, set the connection URL inline and call `db.engine()` as described in comments in the sample notebook itself
+- open your Jupyter server from there
+
+  ```
+  $ ipython kernel install --user --name=.venv
+  $ jupyter notebook
+  ```
   - Or otherwise choose `example-python-snowflake-project/.venv` as your active Jupyter kernel
   - Or use whatever kernel is most convenient, and ensure `sqla-raw` and `snowflake-sqlalchemy` libraries are installed within your kernel
 - Open `snowflake-sample-notebook.ipynb` in Jupyter
-- Ensure `$DATABASE_URL` is [set in the local environment](https://analyzingalpha.com/jupyter-notebook-environment-variables-tutorial)
-  - Alternatively, set the connection URL inline and call `db.engine()` as described in comments in the sample notebook itself
 - Run all cells and see result of query in table at the end! 🎉
