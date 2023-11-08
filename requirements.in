@@ -1,4 +1,7 @@
 ipykernel
+jupyter
+notebook
 pandas
 snowflake-sqlalchemy
 sqla-raw
+

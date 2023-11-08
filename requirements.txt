@@ -14,20 +14,37 @@ aioitertools==0.11.0
     # via aiobotocore
 aiosignal==1.3.1
     # via aiohttp
+anyio==4.0.0
+    # via jupyter-server
 appnope==0.1.3
     # via
     #   ipykernel
     #   ipython
+argon2-cffi==23.1.0
+    # via jupyter-server
+argon2-cffi-bindings==21.2.0
+    # via argon2-cffi
+arrow==1.3.0
+    # via isoduration
 asn1crypto==1.5.1
-    # via
-    #   oscrypto
-    #   snowflake-connector-python
+    # via snowflake-connector-python
 asttokens==2.4.1
     # via stack-data
+async-lru==2.0.4
+    # via jupyterlab
 async-timeout==4.0.3
     # via aiohttp
 attrs==23.1.0
-    # via aiohttp
+    # via
+    #   aiohttp
+    #   jsonschema
+    #   referencing
+babel==2.13.1
+    # via jupyterlab-server
+beautifulsoup4==4.12.2
+    # via nbconvert
+bleach==6.1.0
+    # via nbconvert
 botocore==1.31.64
     # via aiobotocore
 certifi==2023.7.22
@@ -36,6 +53,7 @@ certifi==2023.7.22
     #   snowflake-connector-python
 cffi==1.16.0
     # via
+    #   argon2-cffi-bindings
     #   cryptography
     #   snowflake-connector-python
 charset-normalizer==3.3.2
@@ -43,8 +61,10 @@ charset-normalizer==3.3.2
     #   aiohttp
     #   requests
     #   snowflake-connector-python
-comm==0.1.4
-    # via ipykernel
+comm==0.2.0
+    # via
+    #   ipykernel
+    #   ipywidgets
 cryptography==41.0.5
     # via
     #   pyopenssl
@@ -53,10 +73,16 @@ debugpy==1.8.0
     # via ipykernel
 decorator==5.1.1
     # via ipython
+defusedxml==0.7.1
+    # via nbconvert
 executing==2.0.1
     # via stack-data
+fastjsonschema==2.18.1
+    # via nbformat
 filelock==3.13.1
     # via snowflake-connector-python
+fqdn==1.5.1
+    # via jsonschema
 frozenlist==1.4.0
     # via
     #   aiohttp
@@ -67,47 +93,147 @@ greenlet==3.0.1
     # via sqlalchemy
 idna==3.4
     # via
+    #   anyio
+    #   jsonschema
     #   requests
     #   snowflake-connector-python
     #   yarl
 ipykernel==6.26.0
-    # via -r requirements.in
+    # via
+    #   -r requirements.in
+    #   jupyter
+    #   jupyter-console
+    #   jupyterlab
+    #   qtconsole
 ipython==8.17.2
-    # via ipykernel
+    # via
+    #   ipykernel
+    #   ipywidgets
+    #   jupyter-console
+ipywidgets==8.1.1
+    # via jupyter
+isoduration==20.11.0
+    # via jsonschema
 jedi==0.19.1
     # via ipython
 jinja2==3.1.2
-    # via sqla-raw
+    # via
+    #   jupyter-server
+    #   jupyterlab
+    #   jupyterlab-server
+    #   nbconvert
+    #   sqla-raw
 jmespath==1.0.1
     # via botocore
-jupyter-client==8.5.0
-    # via ipykernel
+json5==0.9.14
+    # via jupyterlab-server
+jsonpointer==2.4
+    # via jsonschema
+jsonschema[format-nongpl]==4.19.2
+    # via
+    #   jupyter-events
+    #   jupyterlab-server
+    #   nbformat
+jsonschema-specifications==2023.7.1
+    # via jsonschema
+jupyter==1.0.0
+    # via -r requirements.in
+jupyter-client==8.6.0
+    # via
+    #   ipykernel
+    #   jupyter-console
+    #   jupyter-server
+    #   nbclient
+    #   qtconsole
+jupyter-console==6.6.3
+    # via jupyter
 jupyter-core==5.5.0
     # via
     #   ipykernel
     #   jupyter-client
+    #   jupyter-console
+    #   jupyter-server
+    #   jupyterlab
+    #   nbclient
+    #   nbconvert
+    #   nbformat
+    #   qtconsole
+jupyter-events==0.9.0
+    # via jupyter-server
+jupyter-lsp==2.2.0
+    # via jupyterlab
+jupyter-server==2.10.0
+    # via
+    #   jupyter-lsp
+    #   jupyterlab
+    #   jupyterlab-server
+    #   notebook
+    #   notebook-shim
+jupyter-server-terminals==0.4.4
+    # via jupyter-server
+jupyterlab==4.0.8
+    # via notebook
+jupyterlab-pygments==0.2.2
+    # via nbconvert
+jupyterlab-server==2.25.1
+    # via
+    #   jupyterlab
+    #   notebook
+jupyterlab-widgets==3.0.9
+    # via ipywidgets
 markupsafe==2.1.3
-    # via jinja2
+    # via
+    #   jinja2
+    #   nbconvert
 matplotlib-inline==0.1.6
     # via
     #   ipykernel
     #   ipython
+mistune==3.0.2
+    # via nbconvert
 multidict==6.0.4
     # via
     #   aiohttp
     #   yarl
+nbclient==0.9.0
+    # via nbconvert
+nbconvert==7.11.0
+    # via
+    #   jupyter
+    #   jupyter-server
+nbformat==5.9.2
+    # via
+    #   jupyter-server
+    #   nbclient
+    #   nbconvert
 nest-asyncio==1.5.8
     # via ipykernel
+notebook==7.0.6
+    # via
+    #   -r requirements.in
+    #   jupyter
+notebook-shim==0.2.3
+    # via
+    #   jupyterlab
+    #   notebook
 numpy==1.26.1
     # via pandas
-oscrypto==1.3.0
-    # via snowflake-connector-python
+overrides==7.4.0
+    # via jupyter-server
 packaging==23.2
     # via
     #   ipykernel
+    #   jupyter-server
+    #   jupyterlab
+    #   jupyterlab-server
+    #   nbconvert
+    #   qtconsole
+    #   qtpy
     #   snowflake-connector-python
 pandas==2.1.2
     # via -r requirements.in
+pandocfilters==1.5.0
+    # via nbconvert
 parso==0.8.3
     # via jedi
 pexpect==4.8.0
@@ -116,51 +242,98 @@ platformdirs==3.11.0
     # via
     #   jupyter-core
     #   snowflake-connector-python
+prometheus-client==0.18.0
+    # via jupyter-server
 prompt-toolkit==3.0.39
-    # via ipython
+    # via
+    #   ipython
+    #   jupyter-console
 psutil==5.9.6
     # via ipykernel
 ptyprocess==0.7.0
-    # via pexpect
+    # via
+    #   pexpect
+    #   terminado
 pure-eval==0.2.2
     # via stack-data
 pycparser==2.21
     # via cffi
-pycryptodomex==3.19.0
-    # via snowflake-connector-python
 pygments==2.16.1
-    # via ipython
+    # via
+    #   ipython
+    #   jupyter-console
+    #   nbconvert
+    #   qtconsole
 pyjwt==2.8.0
     # via snowflake-connector-python
 pyopenssl==23.3.0
     # via snowflake-connector-python
 python-dateutil==2.8.2
     # via
+    #   arrow
     #   botocore
     #   jupyter-client
     #   pandas
+python-json-logger==2.0.7
+    # via jupyter-events
 pytz==2023.3.post1
     # via
     #   pandas
     #   snowflake-connector-python
+pyyaml==6.0.1
+    # via jupyter-events
 pyzmq==25.1.1
     # via
     #   ipykernel
     #   jupyter-client
+    #   jupyter-console
+    #   jupyter-server
+    #   qtconsole
+qtconsole==5.5.0
+    # via jupyter
+qtpy==2.4.1
+    # via qtconsole
+referencing==0.30.2
+    # via
+    #   jsonschema
+    #   jsonschema-specifications
+    #   jupyter-events
 requests==2.31.0
-    # via snowflake-connector-python
+    # via
+    #   jupyterlab-server
+    #   snowflake-connector-python
+rfc3339-validator==0.1.4
+    # via
+    #   jsonschema
+    #   jupyter-events
+rfc3986-validator==0.1.1
+    # via
+    #   jsonschema
+    #   jupyter-events
+rpds-py==0.12.0
+    # via
+    #   jsonschema
+    #   referencing
 s3fs==2023.10.0
     # via sqla-raw
+send2trash==1.8.2
+    # via jupyter-server
 six==1.16.0
     # via
     #   asttokens
+    #   bleach
     #   python-dateutil
-snowflake-connector-python==3.3.1
+    #   rfc3339-validator
+sniffio==1.3.0
+    # via anyio
+snowflake-connector-python==3.4.0
     # via snowflake-sqlalchemy
-snowflake-sqlalchemy==1.5.0
+snowflake-sqlalchemy==1.5.1
     # via -r requirements.in
 sortedcontainers==2.4.0
     # via snowflake-connector-python
+soupsieve==2.5
+    # via beautifulsoup4
 sqla-raw==1.5.1
     # via -r requirements.in
 sqlalchemy==1.4.50
@@ -169,24 +342,47 @@ sqlalchemy==1.4.50
     #   sqla-raw
 stack-data==0.6.3
     # via ipython
-tomlkit==0.12.1
+terminado==0.17.1
+    # via
+    #   jupyter-server
+    #   jupyter-server-terminals
+tinycss2==1.2.1
+    # via nbconvert
+tomlkit==0.12.2
     # via snowflake-connector-python
 tornado==6.3.3
     # via
     #   ipykernel
     #   jupyter-client
+    #   jupyter-server
+    #   jupyterlab
+    #   notebook
+    #   terminado
 traitlets==5.13.0
     # via
     #   comm
     #   ipykernel
     #   ipython
+    #   ipywidgets
     #   jupyter-client
+    #   jupyter-console
     #   jupyter-core
+    #   jupyter-events
+    #   jupyter-server
+    #   jupyterlab
     #   matplotlib-inline
+    #   nbclient
+    #   nbconvert
+    #   nbformat
+    #   qtconsole
+types-python-dateutil==2.8.19.14
+    # via arrow
 typing-extensions==4.8.0
     # via snowflake-connector-python
 tzdata==2023.3
     # via pandas
+uri-template==1.3.0
+    # via jsonschema
 urllib3==1.26.18
     # via
     #   botocore
@@ -194,6 +390,16 @@ urllib3==1.26.18
     #   snowflake-connector-python
 wcwidth==0.2.9
     # via prompt-toolkit
+webcolors==1.13
+    # via jsonschema
+webencodings==0.5.1
+    # via
+    #   bleach
+    #   tinycss2
+websocket-client==1.6.4
+    # via jupyter-server
+widgetsnbextension==4.0.9
+    # via ipywidgets
 wrapt==1.15.0
     # via aiobotocore
 yarl==1.9.2
